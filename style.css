@@ -1,0 +1,144 @@
+html,
+body {
+    height: 100%;
+    /*width: 80%;*/
+}
+
+body {
+    background: #eee;
+}
+
+
+/*------------------------------------
+Header
+------------------------------------*/
+
+.header {
+    background: #333333;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    /*left: -200px;*/
+    padding: 10px 20px;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s;
+    z-index: 2000;
+}
+
+.header_logo {
+    color: #ffffff;
+    float: left;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header_icon_bar {
+    display: block;
+    float: right;
+    top: 0px;
+    padding: 20px;
+}
+
+.header_icon_bar span {
+    display: block;
+    height: 2px;
+    width: 25px;
+    background: #ffffff;
+    margin-bottom: 5px;
+}
+
+.header_menu_animate {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out
+}
+
+.header_social {
+    position: absolute;
+    /* rispetto bordo sinistro del pannello  */
+    left: 200px;
+    top: 1em;
+    width: 40px;
+    height: 300px;
+    padding: 0;
+    margin-top: 40px;
+    background: inherit;
+    /*colore pulsante*/
+    color: #dadada;
+    /* colore del testo */
+    cursor: pointer;
+    /* tipo del cursore */
+    font-size: 1.2em;
+    line-height: 1;
+    z-index: 2001;
+    /* sempre in prima vista rispetto altri elementi della pagina  */
+    /* animazione del colore del testo al hover */
+    -webkit-transition: color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+}
+
+.header_social_icon {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.header_menu {
+    padding: 0;
+}
+
+.header_menu_text {
+    display: inline-block;
+    padding: 0;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.header_menu_item {
+    position: relative;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #dadada;
+    text-decoration: none;
+    -webkit-transition: color .5s ease, padding .5s ease;
+    -moz-transition: color .5s ease, padding .5s ease;
+    transition: color .5s ease, padding .5s ease;
+}
+
+
+/*---------------------------------
+Reset Posizioni
+---------------------------------*/
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

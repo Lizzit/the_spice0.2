@@ -1,0 +1,378 @@
+/*----------------------------------
+Generale
+----------------------------------*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #eee;
+}
+
+.animate {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    color: #000000;
+    padding: 12px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+p {
+    line-height: 22px;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+
+/*----------------------------------
+Header
+----------------------------------*/
+
+.header {
+    background: #333;
+}
+
+.header_logo {
+    color: #ffffff;
+    float: left;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header_icon-bar {
+    display: block;
+    float: right;
+    padding: 20px;
+    display: none;
+}
+
+.header_icon-bar span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background: #ffffff;
+    margin-bottom: 5px;
+}
+
+.header_menu {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.header_menu_item {
+    position: relative;
+    width: 98px;
+    height: 50px;
+    float: right;
+}
+
+.header_menu_item:hover {
+    background: #000;
+}
+
+.header_menu_item>ul {
+    position: relative;
+    width: 30px;
+    height: 90px;
+    top: 30px;
+    display: none;
+}
+
+.header_menu_item:hover ul {
+    position: absolute;
+    display: block;
+}
+
+.header_menu_item_bev {
+    clear: left;
+}
+
+
+/*
+.header_menu {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header_menu_item {
+    display: inline-block;
+}
+
+.header_menu_item a {
+    color: #ffffff;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header_menu_item a:hover {
+    background: #000000;
+}
+
+.header_menu_item>ul {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.header_menu_item>ul>li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+.header_menu_item_bev {
+    position: relative;
+    float: none;
+    width: 100%;
+    border: none;
+}*/
+
+
+/*----------------------------------
+Cover
+----------------------------------*/
+
+.cover {
+    height: 70%;
+    background-image: url(img/logo.jpeg);
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.cover_filter {
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.cover_caption {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    padding: 0px 20px;
+}
+
+.cover_caption_copy {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/*----------------------------------
+Cards
+----------------------------------*/
+
+.cards {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.cards_card {
+    width: 30%;
+    margin: 0 1.5%;
+    background: white;
+    float: left;
+    border-radius: 25px;
+}
+
+.cards_card_img {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.cards_card_copy {
+    padding: 5px 20px;
+}
+
+.cards_card_copy h3 {
+    margin-bottom: 0;
+}
+
+section>a>div>div>h3 {
+    color: #000000;
+}
+
+section>a>div>div>p {
+    color: #000000;
+}
+
+
+/*----------------------------------
+Banner
+----------------------------------*/
+
+.banner {
+    background: white;
+    height: 50%;
+}
+
+.banner_img {
+    width: 30%;
+    float: left;
+    height: 100%;
+    background-image: url(https://source.unsplash.com/category/buildings/400x400);
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-position: center center;
+}
+
+.banner_copy {
+    width: 70%;
+    float: left;
+    height: 100%;
+}
+
+.banner_copy_text {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+.banner_copy_text h3 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.banner_copy_text h4 {
+    font-style: 22px;
+    margin: 5px 0;
+}
+
+
+/*----------------------------------
+Footer
+----------------------------------*/
+
+.footer {
+    background: #333;
+    padding: 30px;
+    color: white;
+    margin-top: 40px;
+}
+
+footer>p>a {
+    text-decoration: none;
+    color: green;
+}
+
+
+/*----------------------------------
+Tablet
+----------------------------------*/
+
+@media(max-width:998px) {}
+
+
+/*----------------------------------
+Smartphone
+----------------------------------*/
+
+@media(max-width:767px) {
+    /*Header*/
+    .header {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+    }
+    .header_icon-bar {
+        display: block;
+    }
+    .header_menu {
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+    }
+    .header_menu_item {
+        display: block;
+    }
+    .is-open {
+        height: 300px;
+        overflow: auto;
+    }
+    /*Cover*/
+    .cover {
+        height: 100%;
+    }
+    .cards_card {
+        width: 90%;
+        margin: 5%;
+    }
+    /*Banner*/
+    .banner {
+        height: 100%;
+    }
+    .banner_img,
+    .banner_copy {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+
+/*---------------------------------
+Reset Posizioni
+---------------------------------*/
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

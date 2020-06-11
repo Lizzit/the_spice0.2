@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+</head>
+
+<body>
+    <header class="header clearfix fixed">
+        <a href="" class="header_logo">The Spice</a>
+        <a href="" class="header_icon-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <ul class="header_menu animate">
+            <li class="header_menu_item"><a href="index.htm">Home</a></li>
+            <li class="header_menu_item"><a href="menu.htm">Menù</a></li>
+            <li class="header_menu_item"><a href="bevande.htm">Bevande</a></li>
+            <li class="header_menu_item"><a href="prenotazioni.htm">Prenota</a></li>
+            <li class="header_menu_item"><a href="storia.htm">Storia</a></li>
+            <li class="header_menu_item"><a href="location.htm">Dove Trovarci</a></li>
+        </ul>
+    </header>
+
+    <section class="cover">
+        <div class="cover_filter"></div>
+        <div class="cover_caption">
+            <div class="cover_caption_copy">
+                <h1>The Spice</h1>
+                <h2>[BRAND]</h2>
+                <a href="" class="button">[FORSE UTILE]</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards clearfix">
+        <a href="menu.htm">
+            <div class="cards_card">
+                <img class="cards_card_img" src="https://source.unsplash.com/category/food/400x260">
+                <div class="cards_card_copy">
+                    <h3>Menù</h3>
+                    <p>Vieni con noi per un viaggio verso i gusti di tutto il mondo</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="bevande.htm">
+            <div class="cards_card">
+                <img class="cards_card_img" src="https://source.unsplash.com/category/wine/400x260">
+                <div class="cards_card_copy">
+                    <h3>Bevande</h3>
+                    <p>Assaggia da noi i migliori vini che puoi trovare</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="prenota.htm">
+            <div class="cards_card">
+                <img class="cards_card_img" src="https://source.unsplash.com/user/erondu/400x260">
+                <div class="cards_card_copy">
+                    <h3>Prenota</h3>
+                    <p>Assicurati un tavolo dedicato per le tue serate</p>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section class="cards clearfix">
+        <a href="storia.htm">
+            <div class="cards_card">
+                <img class="cards_card_img" src="https://source.unsplash.com/category/food/400x260">
+                <div class="cards_card_copy">
+                    <h3>Storia</h3>
+                    <p>Scopri la nostra storia</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="location.htm">
+            <div class="cards_card">
+                <img class="cards_card_img" src="https://source.unsplash.com/category/wine/400x260">
+                <div class="cards_card_copy">
+                    <h3>Dove Trovarci</h3>
+                    <p>Scopri dove siamo</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="cards_card">
+                <img class="cards_card_img" src="https://source.unsplash.com/user/erondu/400x260">
+                <div class="cards_card_copy">
+                    <h3>W.I.P.</h3>
+                    <p>Work In Progress</p>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section class="banner clearfix">
+        <div class="banner_img"></div>
+        <div class="banner_copy">
+            <div class="banner_copy_text">
+                <h3>Banner title</h3>
+                <h4>Banner Subtitle</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="contatti">Contatti: <br> Numero di Telefono: <a href="tel: 0000000000">00 0000 0000</a> <br>Email: <a href="mailto: thespice.restaurant.sic@gmail.com" target="_blank">thespice.restaurant.sic@gmail.com</a><br>P. IVA: 00000000000</p>
+        <p>Questo sito è un test per una prova esame. <br> Tutto ciò che vedrai all'interno è fittizio e con solo scopo didattico</p>
+        Copyright - 2020 Elia, Matteo, Marta, Federica, Simone &copy</a>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".header_icon-bar").click(function(e) {
+                $(".header_menu").toggleClass('is-open');
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            var navHeight = $('#nav').outerHeight();
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > navHeight) {
+                    $('#nav').addClass('fixed');
+                    $('#content').css('padding-top', navHeight + 'px');
+                } else {
+                    $('#nav').removeClass('fixed');
+                    $('#content').css('padding-top', '0');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
