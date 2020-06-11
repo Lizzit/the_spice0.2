@@ -92,6 +92,7 @@ Header
     width: 30px;
     top: 30px;
     display: none;
+    padding: 0;
 }
 
 .header_menu_item:hover ul {
@@ -120,6 +121,7 @@ Header
     top: 100%;
     left: 0;
     width: 100%;
+    list-style: none;
 }
 
 .header_menu_item>ul>li:hover ul {
@@ -132,6 +134,7 @@ Header
     float: none;
     width: 100%;
     border: none;
+    background: #333;
 }
 
 
