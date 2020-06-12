@@ -340,6 +340,10 @@ Smartphone
     /*Cover*/
     .cover {
         height: 100%;
+        background-color: #ffffff;
+        background-image: url(img/logo.jpeg);
+        background-size: 140%;
+        background-repeat: no-repeat;
     }
     .cards_card {
         width: 90%;
