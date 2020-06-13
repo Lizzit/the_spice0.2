@@ -58,8 +58,11 @@ Header
     color: #ffffff;
     float: left;
     display: block;
-    padding: 20px;
+    padding: 14px;
     text-decoration: none;
+    font-size: 30px;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 3px 3px 3px #aaa;
 }
 
 .header_icon-bar {
@@ -154,6 +157,17 @@ Generale
 
 .container {
     padding-top: 70px;
+}
+
+.buildimg {
+    float: left;
+    margin: 0 15px 50px 0;
+    height: 260px;
+    width: 400px;
+}
+
+.storia {
+    min-height: 450px;
 }
 
 
@@ -383,11 +397,17 @@ Smartphone
         width: 90%;
         margin: 5%;
     }
-    /*container*/
+    .cards {
+        margin: 0;
+    }
+    /*Table*/
+    table {
+        width: 90%;
+    }
+    /*Map*/
     .map {
         margin: 0 20px;
     }
-    /*map*/
     iframe {
         height: 400px;
         width: 300px;
