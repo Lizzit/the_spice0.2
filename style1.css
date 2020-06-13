@@ -297,7 +297,7 @@ Location
 
 .map {
     padding-top: 70px;
-    margin: 0 60px;
+    /*margin: 0 60px;*/
 }
 
 .map>p {
@@ -382,6 +382,15 @@ Smartphone
     .cards_card {
         width: 90%;
         margin: 5%;
+    }
+    /*container*/
+    .map {
+        margin: 0 20px;
+    }
+    /*map*/
+    iframe {
+        height: 400px;
+        width: 300px;
     }
     /*Banner*/
     .banner {
