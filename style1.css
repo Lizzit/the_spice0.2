@@ -36,6 +36,14 @@ p {
     z-index: 999;
 }
 
+td {
+    padding: 5px 0px;
+}
+
+td>h2 {
+    margin: 30px 0 0 0;
+}
+
 
 /*----------------------------------
 Header
@@ -57,7 +65,7 @@ Header
 .header_icon-bar {
     display: block;
     float: right;
-    padding: 20px;
+    padding: 18px;
     display: none;
 }
 
@@ -308,6 +316,14 @@ Footer
     margin-top: 40px;
 }
 
+.contatti {
+    font-size: 16px;
+}
+
+.copy {
+    font-size: 12px;
+}
+
 footer>p>a {
     text-decoration: none;
     color: green;
@@ -336,15 +352,23 @@ Smartphone
         display: block;
     }
     .header_menu {
-        width: 100%;
+        width: 100px;
         height: 0px;
         overflow: hidden;
+        position: fixed;
+        right: 0;
+        top: 60px;
     }
     .header_menu_item {
         display: block;
+        background: #333333;
+        height: 70px;
+    }
+    .header_menu_item>a {
+        padding: 20px 0;
     }
     .is-open {
-        height: 300px;
+        height: 420px;
         overflow: auto;
     }
     /*Cover*/
