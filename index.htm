@@ -127,12 +127,31 @@
     </section>
 
     <footer class="footer">
+        <div class="lang clearfix">
+            <ul class="lang_main">
+                <li class="lang_main_txt"><img src="img/italiano.svg" alt="Italia" class="lang_img"><a href="">Italiano</a>
+                    <ul class="lang_second">
+                        <li><img src="img/english.png" alt="" class="lang_img"><a href="en/index.htm">English</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <p class="contatti">Contatti: <br> Numero di Telefono: <a href="tel: 0000000000">00 0000 0000</a> <br>Email: <a href="mailto: thespice.restaurant.sic@gmail.com" target="_blank">thespice.restaurant.sic@gmail.com</a><br>P. IVA: 00000000000</p>
         <p class="copy">Questo sito è un test per una prova esame. <br> Tutto ciò che vedrai all'interno è fittizio e con solo scopo didattico</p>
         <p class="copy">Copyright - 2020 Elia, Matteo, Marta, Federica, Simone &copy</p>
 
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".lang_main").click(function(e) {
+                $(".lang_second").toggleClass('open');
+                $(".lang_main").toggleClass('open_main');
+                $(".lang_main_txt").toggleClass('open_txt');
+                e.preventDefault();
+            });
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $(".header_icon-bar").click(function(e) {
