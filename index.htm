@@ -129,9 +129,13 @@
     <footer class="footer">
         <div class="lang clearfix">
             <ul class="lang_main">
-                <li class="lang_main_txt"><img src="img/italiano.svg" alt="Italia" class="lang_img"><a href="">Italiano</a>
+                <li class="lang_main_txt">
+                    <a href=""></a><img src="img/italiano.svg" alt="Italia" class="lang_img"><a href="">Italiano</a>
                     <ul class="lang_second">
-                        <li><img src="img/english.png" alt="" class="lang_img"><a href="en/index.htm">English</a></li>
+                        <li>
+                            <a href="en/index.htm"></a><img src="img/english.png" alt="" class="lang_img"></a>
+                            <a href="en/index.htm">English</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -147,7 +151,7 @@
             $(".lang_main").click(function(e) {
                 $(".lang_second").toggleClass('open');
                 $(".lang_main").toggleClass('open_main');
-                $(".lang_main_txt").toggleClass('open_txt');
+                /*$(".lang_main_txt").toggleClass('open_txt');*/
                 e.preventDefault();
             });
         });
