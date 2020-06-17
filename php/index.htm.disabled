@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Contatto via email</title>
+    <script src="convalida.js"></script>
+</head>
+
+<body>
+    <div>
+        <form action="contatto.php" method="post">
+            <p>
+                <label for="nome">Nome</label>
+            </p>
+            <p>
+
+            </p>
+            <p>
+
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

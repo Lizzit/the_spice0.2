@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Spice</title>
-    <link rel="stylesheet" href="bootstrap.css">
+    <!--<link rel="stylesheet" href="bootstrap.css">-->
     <link rel="stylesheet" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
@@ -43,30 +43,41 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 m-auto">
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-title">
                         <h3 class="text-center py-2"><b>Modulo richiesta prenotazione:</b></h3>
                         <hr>
+                        <?php
+                            $Msg = "";
+                            if(isset($_GET['error']))
+                            {
+                                $Msg = " Riempire tutte le caselle obbligatorie ";
+                                echo '<div class="alert alert-danger">'.$Msg.'</div>';
+                            }
+
+                            if(isset($_GET['success']))
+                            {
+                                $Msg = " La vostra richiesta è stata inoltrata con successo. Presto riceverete una email di conferma ";
+                                echo '<div class="alert alert-success">'.$Msg.'</div>';
+                            }
+
+                        ?>
                     </div>
                     <div class="card-body">
                         <form action="process.php" method="post">
-                            <br> * Nome: <input type="text" name="nome" size="45" maxlength="15" placeholder="Nome" class="form-control mb-2">
-
-                            <br><br> * Cognome: <input type="text" name="cognome" size="45" maxlength="25" placeholder="Cognome" class="form-control mb-2">
-
-                            <br><br> * Telefono: <input type="text" name="telefono" size="15" maxlength="15" placeholder="**********" class="form-control mb-2">
-
-                            <br><br> * E-Mail: <input type="text" name="email" size="45" placeholder="example@ex.it" class="form-control mb-2">
-
-                            <br><br> * Data Prenotazione: <select name="giornoarrivo"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+                            * Nome: <input type="text" name="Nome" size="45" maxlength="15" placeholder="Nome" class="form-control mb-2">
+                            * Cognome: <input type="text" name="cognome" size="45" maxlength="25" placeholder="Cognome" class="form-control mb-2">
+                            Telefono: <input type="text" name="telefono" size="15" maxlength="15" placeholder="**********" class="form-control mb-2">
+                            * E-Mail: <input type="text" name="email" size="45" placeholder="example@ex.it" class="form-control mb-2">
+                            * Data Prenotazione: <select name="giornoarrivo"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
                             <select name="mesearrivo"><option value="1">Gennaio</option><option value="2">Febbraio</option><option value="3">Marzo</option><option value="4">Aprile</option><option value="5">Maggio</option><option value="6">Giugno</option><option value="7">Luglio</option><option value="8">Agosto</option><option value="9">Settembre</option><option value="10">Ottobre</option><option value="11">Novembre</option><option value="12">Dicembre</option></select>
                             <select name="annoarrivo"><option value="2020" selected>2020</option><option value="2021" >2021</option></select>
 
-                            <br><br> * N. Adulti: <input type="text" name="adulti" size="3" maxlength="3" value="" class="form-control mb-2"> * N. Bambini: <input type="text" name="bambini" size="3" maxlength="3" value="" class="form-control mb-2">
+                            * N. Adulti: <input type="text" name="adulti" size="3" maxlength="3" value="" class="form-control mb-2"> * N. Bambini: <input type="text" name="bambini" size="3" maxlength="3" value="" class="form-control mb-2">
 
 
-                            <br><br> * Note: <textarea name="msg" class="form-control"></textarea>
-                            <br><br><button class="btn btn-succes"></button><br><br>
+                            * Note: <textarea name="msg" class="form-control"></textarea>
+                            <button class="btn btn-succes" name="btn-send">Prenota</button>
                             <p width="100%">
                                 * I campi contrassegnati dall'asterisco sono obbligatori.<br> Ogni richiesta è subordinata alla conferma del ristorante<br><br>
                             </p>
