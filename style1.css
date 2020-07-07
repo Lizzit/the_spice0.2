@@ -220,12 +220,20 @@ Cards
     margin: 40px auto;
 }
 
+.border {
+    border: 2px solid red;
+}
+
 .cards_card {
     width: 30%;
     margin: 0 1.5%;
     background: white;
     float: left;
     border-radius: 25px;
+}
+
+.margin {
+    margin: 0 10%;
 }
 
 .cards_card_img {
@@ -292,6 +300,22 @@ Banner
 .banner_copy_text h4 {
     font-style: 22px;
     margin: 5px 0;
+}
+
+
+/*----------------------------------
+Covid
+----------------------------------*/
+
+.covid {
+    width: 80%;
+}
+
+.gel {
+    position: static;
+    float: right;
+    width: 400px;
+    height: auto;
 }
 
 
